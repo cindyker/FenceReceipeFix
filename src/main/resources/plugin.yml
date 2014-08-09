@@ -1,0 +1,7 @@
+name: FenceRecipeFix
+version: 1.1
+main: com.minecats.cindyk.fencerecipefix.FenceRecipeFix
+author: cindy_k
+authors: [ThinkOfDeath]
+description: Add new Fence Recipes to Minecraft
+website: www.spigotmc.org
