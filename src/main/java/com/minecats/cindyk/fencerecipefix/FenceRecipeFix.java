@@ -29,7 +29,6 @@ public class FenceRecipeFix extends JavaPlugin{
             //==================================================================
             //Add the two recipes
             getServer().addRecipe( CreateRecipe1());
-
             getServer().addRecipe( CreateRecipe2());
 
         }
@@ -38,18 +37,15 @@ public class FenceRecipeFix extends JavaPlugin{
     {
         ShapedRecipe r;
         ItemStack fence2 = new ItemStack( Material.FENCE,3 );
-        ItemMeta im2 = fence2.getItemMeta();
-        im2.setDisplayName( "Spigot Fences" );
-        fence2.setItemMeta( im2 );
 
         r = new ShapedRecipe( fence2 );
         r.shape("   ", "ASB", "CSD" );
 
         r.setIngredient( 'S', Material.STICK );
-        ItemStack tree = new ItemStack(Material.WOOD,-1);
-        ItemStack tree2 = new ItemStack(Material.WOOD,-1);
-        ItemStack tree3 = new ItemStack(Material.WOOD,-1);
-        ItemStack tree4 = new ItemStack(Material.WOOD,-1);
+        ItemStack tree = new ItemStack(Material.WOOD,1,Short.MAX_VALUE);
+        ItemStack tree2 = new ItemStack(Material.WOOD,1,Short.MAX_VALUE);
+        ItemStack tree3 = new ItemStack(Material.WOOD,1,Short.MAX_VALUE);
+        ItemStack tree4 = new ItemStack(Material.WOOD,1,Short.MAX_VALUE);
         r.setIngredient( 'A',tree.getData());
         r.setIngredient( 'B',tree2.getData());
         r.setIngredient( 'C',tree3.getData());
@@ -61,20 +57,23 @@ public class FenceRecipeFix extends JavaPlugin{
 
     ShapedRecipe CreateRecipe2( )
     {
+        ShapedRecipe r;
         ItemStack fence2 = new ItemStack( Material.FENCE,3 );
-        ItemMeta im2 = fence2.getItemMeta();
-        im2.setDisplayName( "Spigot Fences" );
-        fence2.setItemMeta( im2 );
 
-        ShapedRecipe recipe2 = new ShapedRecipe( fence2 );
-        recipe2.shape( "PSP", "PSP", "   " );
+        r = new ShapedRecipe( fence2 );
+        r.shape("ASB", "CSD", "   " );
 
-        recipe2.setIngredient( 'S', Material.STICK );
+        r.setIngredient( 'S', Material.STICK );
+        ItemStack tree = new ItemStack(Material.WOOD,1,Short.MAX_VALUE);
+        ItemStack tree2 = new ItemStack(Material.WOOD,1,Short.MAX_VALUE);
+        ItemStack tree3 = new ItemStack(Material.WOOD,1,Short.MAX_VALUE);
+        ItemStack tree4 = new ItemStack(Material.WOOD,1,Short.MAX_VALUE);
+        r.setIngredient( 'A',tree.getData());
+        r.setIngredient( 'B',tree2.getData());
+        r.setIngredient( 'C',tree3.getData());
+        r.setIngredient( 'D',tree4.getData());
 
-        ItemStack tree = new ItemStack(Material.WOOD,-1);
-        recipe2.setIngredient( 'P', tree.getData());
-
-        return recipe2;
+        return r;
 
     }
 
